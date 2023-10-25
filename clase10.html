@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root{ /*SON LAS COSAS POR DEFECTO Y PREESTABLECIDO POR MÍ*/
+        --white: #FFFFFF;
+        --black: #000000;
+        --dark: #232830;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --sm: 14px;
+        --md:16px;
+        --lg: 18px;
+        }
+        body{ /*DEFINO QUE TODO EL BODY VA A TENER ESTOS DATOS:*/
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;/*eliminamos el margen por defecto del navegador y lo hacemos sobre en la linea*/
+        }
+        .my-order{
+            width: 100%;
+            height: 100vh;
+            display: grid;/*centra elementos*/
+            place-items: center;
+        }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 40px;
+        }
+        .my-order-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .my-order-content{
+            display: flex;
+            flex-direction: column;
+        }
+        .order{
+            display: grid;
+            grid-template-columns: auto 1fr auto ;
+            background-color: none;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 12px; /* PORQUE ESTA CERCA DE LAS COSAS DE ABAJO*/
+            border-radius:none;
+            padding: none; /*con esto puedo mover manualmente el "04.25.21 6articles     $560"*/
+        }
+        .order p:nth-child(1){/*"6 articles"*/
+            display: flex;
+            flex-direction: column;/*lo mande abajo*/            
+        }
+        .order p:nth-child(2){/*"$560,00*/
+            text-align: end; /*lo alinee al final de la derecha*/
+            font-weight: bold;            
+        }
+        .order p span:nth-child(1){/*"04.25.21"*/
+            font-size: var(--md);
+            font-weight: bold;            
+        }
+        .order p span:nth-child(2){/*"6 articles"*/
+            font-size: var(--sm);        
+            color: var(--very-light-pink)    
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="my-order">
+        <div class="my-order-container">
+            <h1 class="title">My Orders</h1>
+            <div class="my-order-content">
+                <div class="order">
+                    <p>
+                        <span>04.25.21</span>
+                        <span>6 articles</span>
+                    </p>
+                    <p>$560,00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
+                </div>
+                <div class="order">
+                    <p>
+                        <span>04.25.21</span>
+                        <span>6 articles</span>
+                    </p>
+                    <p>$560,00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
+                </div>
+                <div class="order">
+                    <p>
+                        <span>04.25.21</span>
+                        <span>6 articles</span>
+                    </p>
+                    <p>$560,00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
+                </div>
+                <div class="order">
+                    <p>
+                        <span>04.25.21</span>
+                        <span>6 articles</span>
+                    </p>
+                    <p>$560,00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
