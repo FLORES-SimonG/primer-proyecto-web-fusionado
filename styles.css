@@ -271,6 +271,7 @@ margin-bottom: 8px;
     grid-template-columns: repeat(auto-fill, 240px);/*despliegue automatico segun la pantalla*/
     gap: 26px; /*PRODUCE UN ESPACIO ENTRE CADA CARTA*/
     place-content: center;/*centraliza y alinea en toda la pantalla las cartas ES MUY IMPORTANTE*/
+    margin-top: 20px;
 }
 .product-card{
     width: 240px;
@@ -297,13 +298,13 @@ margin-bottom: 8px;
     width: 35px;
     height: 35px;
 }
-.product-info div p:nth-child(1){/*p es un selector y estoy diiendo que el primer parrafot que esta dentro de div de product info va a tener estas clases eso hace que el otro parrafo no se toque con el p:*/
-    font-weight:  bold;
+.product-info p p:nth-child(1){/*p es un selector y estoy diiendo que el primer parrafot que esta dentro de div de product info va a tener estas clases eso hace que el otro parrafo no se toque con el p:*/
+    font-weight: bold; 
     font-size: var(--md);
     margin-top: 0;
     margin-bottom: 4px;
 }
-.product-info div p:nth-child(2){/*ACA INDICO QUE ES EL SEGUNDO PARRAFO*/
+.product-info p p:nth-child(2){/*ACA INDICO QUE ES EL SEGUNDO PARRAFO*/
     
     font-size: var(--sm);
     margin-top: 0;

@@ -4,6 +4,8 @@ const menuHamIcon = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
 const aside = document.querySelector('.product-detail');
+const cardsContainer = document.querySelector('.cards-container');
+
 
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
@@ -17,7 +19,7 @@ function toggleDesktopMenu(){
     if (!isAsideClosed){
         aside.classList.add('inactive');
     }
-    
+
     desktopMenu.classList.toggle('inactive');   
 }
 function toggleMobileMenu(){
@@ -37,3 +39,87 @@ function toggleCarritoAside(){
     }
     aside.classList.toggle('inactive');
 }
+
+const productList=[];
+
+productList.push({
+    name: 'Bike',
+    price: 120,
+    image:'https://images.pexels.com/photos/3370153/pexels-photo-3370153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+});
+productList.push({
+    name: 'Computer',
+    price: 5902,
+    image:'https://images.pexels.com/photos/3370153/pexels-photo-3370153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+});
+productList.push({
+    name: 'Phone',
+    price: 999,
+    image:'https://images.pexels.com/photos/3370153/pexels-photo-3370153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+});
+
+
+/*<div class="product-card">
+            <img src="https://images.pexels.com/photos/3370153/pexels-photo-3370153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="product-info">
+                <div>
+                    <p>$120</p>
+                    <p>Bike</p>
+                </div>
+                
+                <figure>
+                    <img src="./icons/bt_add_to_cart.svg" alt="">
+                </figure>
+            </div>             
+        </div>
+*/
+
+
+
+function renderProducts(arr){
+    for (product of arr){
+        const productCard = document.createElement('div');//creo un div?
+        productCard.classList.add('product-card');
+    
+        //product={name,price,image}-->product.image
+        const productImg = document.createElement('img'); //creo una imagen
+        productImg.setAttribute('src',product.image);
+        
+    
+        const productInfo = document.createElement('div');//creo un div
+        productInfo.classList.add('product-info');
+    
+        const productInfoDiv = document.createElement('p');
+        const productPrice = document.createElement('p');
+        productPrice.innerText= '$' + product.price;
+        const productName = document.createElement('p');
+        productName.innerText=product.name;
+    
+        
+        productInfoDiv.appendChild(productPrice);
+        productInfoDiv.appendChild(productName);
+        
+    
+        const productInfoFigure = document.createElement('figure');
+        const productImgCart = document.createElement('img');
+        productImgCart.setAttribute('src','./icons/bt_add_to_cart.svg');
+        
+        productInfoFigure.appendChild(productImgCart);
+        
+        productInfo.appendChild(productInfoDiv);
+        productInfo.appendChild(productInfoFigure);
+    
+    
+        productCard.appendChild(productImg);
+        productCard.appendChild(productInfo);
+    
+        cardsContainer.appendChild(productCard);
+    
+    
+        
+        
+    
+    }
+}
+
+renderProducts(productList);
