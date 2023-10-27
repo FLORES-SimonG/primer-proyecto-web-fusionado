@@ -187,7 +187,7 @@ margin-bottom: 8px;
 /*ASIDE product detail y carrito*/
 aside{ /*cambie el nombre, paso de product-detail a aside para no romper el codigo porque agregue en el html ID's*/
     background-color:var(--white);
-    width: min-content;
+    width: 400px;
     box-sizing: border-box;
     position: absolute;
     right: 0;
@@ -317,8 +317,6 @@ aside img {
     margin-bottom: 36px;
     margin-top: 0px;
 }
-
-
 .primary-button {
     background-color: var(--hospital-green);
     border-radius:8px;
@@ -354,7 +352,6 @@ aside img {
     border-radius: 20px;
     object-fit: cover; /*pone la imagen re linda y optima con tamaño original*/
 }
-
 .product-card .product-info{
     display:flex;
     justify-content: space-between;
@@ -362,7 +359,6 @@ aside img {
     margin-top: 12px;
 
 }
-
 .product-card .product-info figure {
     margin: 0;
 }
